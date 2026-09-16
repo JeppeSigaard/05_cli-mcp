@@ -16,7 +16,8 @@ A small React landing page about teaching your AI agent. Built and extended live
 
 - TypeScript only. Never create `.js` or `.jsx` files (see `.claude/rules/no-javascript.md`).
 - Named exports, no default exports.
-- Styling lives in `src/styles.css` with plain class names; no CSS-in-JS libraries.
+- Styling uses StyleX: `stylex.create` in the component file, applied with `{...stylex.props(...)}`.
+- Shared colors live in `src/tokens.stylex.ts` (`stylex.defineVars`); `src/stylex.css` holds only the `@stylex;` entrypoint.
 - Every new component gets a test in the same change.
 
 ## Tools
